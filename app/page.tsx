@@ -19,7 +19,7 @@ export default function Page() {
           </a>
         </div>
       </nav>  
-      <main className="">
+      <main className="grid grid-rows">
         <section className=" grid grid-cols-2 h-screen">
           <div className="flex flex-col justify-start pt-[65px] md:pt-[125px] lg:pt-[190px] bg-[#F5F0E8] gap-6 md:gap-8 px-8 md:px-12 lg:px-24 ">
             <h2 className="specialFont tracking-[4px] leading-[15px] text-[#C8430A] text-[10px] mb-5">SYSTEMIC SYNTHESIS ENGINE</h2>
@@ -39,8 +39,17 @@ export default function Page() {
             </button>
           </div>
           <div className="bg-[#0F1F3D]">
-
           </div>
+        </section>
+        <section className="text-center text-[#94979E] border-[#D4CCB8] bg-[#E7E4DC] py-7 border-1 tracking-[5px] leading-[15px] text-[10px]">
+          <span className="">
+            // INGESTION_PIPELINE_ACTIVE
+          </span>
+        </section>
+        <section>
+          <textarea>
+            
+          </textarea>
         </section>
       </main>
     </>
