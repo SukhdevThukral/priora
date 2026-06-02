@@ -11,7 +11,6 @@ interface Problem{
   type: 'Fix' | 'Build' | 'Investigate'
   evidence: string
   confidence: string
-  sampleSize: string
 }
 
 
@@ -150,12 +149,7 @@ export default function Page() {
                     <blockquote className="border-l-2 border-[#C45C2A] pl-4 mt-3">
                       <p className="paraFont italic text-[14px] text-[#0E1828] leading-[22px]">{p.evidence}</p>
                     </blockquote>
-                  </div>
-                  <div className="flex justify-between items-center border-t-1 border-[#D4CCB8] pt-4">
-                    <span className="specialFont text-[9px] tracking-[3px] text-[#94979E]">
-                      CONFIDENCE: {p.confidence.toUpperCase()} (N={p.sampleSize})
-                    </span>                    
-                  </div>                 
+                  </div>            
                 </div>
               ))}
             </div>
