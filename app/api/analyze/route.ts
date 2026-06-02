@@ -13,7 +13,6 @@ Each item shld follow this exact structure:
 "type" : "Fix" | "Build" | "Investigate",
 "evidence" : "a direct quote from the feedback",
 "confidence" : "high" | "medium" | "low"
-"sampleSize" : 12
 }
 
 order by priority, return 3-6 problems max, only return the json array, nthg else.`
