@@ -1,4 +1,5 @@
 'use client'
+import HeroAnimation from "./components/heroAnimation";
 import { useState } from "react";
 
 interface Problem{
@@ -43,6 +44,8 @@ export default function Page() {
 
   return (
     <>
+
+    {/*NAVBAR*/}
       <nav className="flex flex-row items-center justify-between px-10 py-5"> 
         <div className="flex items-center gap-8">
           <span style={{ fontFamily:"'Newsreader', serif"}} className="font-bold text-[#0E1828] tracking-widest text-[24px]" >
@@ -61,8 +64,10 @@ export default function Page() {
           </a>
         </div>
       </nav>  
+      {/*HERO*/}
       <main className="grid grid-rows">
         <section className=" grid grid-cols-2 h-screen">
+          {/*HERO LEFT AREA*/}
           <div className="flex flex-col justify-start pt-[65px] md:pt-[125px] lg:pt-[190px] bg-[#F5F0E8] gap-6 md:gap-8 px-8 md:px-12 lg:px-24 ">
             <h2 className="specialFont tracking-[4px] leading-[15px] text-[#C8430A] text-[10px] mb-5">SYSTEMIC SYNTHESIS ENGINE</h2>
             <h1 style={{ fontFamily: "'Newsreader', serif" }} className="text-4xl sm:text-[55px] md:text-[65px] lg:text-[75px] leading-[64.8px]">
@@ -80,7 +85,9 @@ export default function Page() {
               </svg>
             </button>
           </div>
+          {/*HERO RIGHT AREA*/}
           <div className="bg-[#0F1F3D]">
+            <HeroAnimation/>
           </div>
         </section>
         <section className="">
