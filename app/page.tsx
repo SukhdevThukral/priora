@@ -54,14 +54,6 @@ export default function Page() {
             BETA
           </span>
         </div>
-        <div className="flex gap-10">
-          <a href="#" className="text-[10px] tracking-[0.2em] text-[#0E1828]/60 hover:text-[#0E1828] transition-colors specialFont">
-            PROCESS
-          </a>
-          <a href="#" className="text-[10px] tracking-[0.2em] text-[#0E1828]/60 hover:text-[#0E1828] transition-colors specialFont">
-            MANIFESTO
-          </a>
-        </div>
       </nav>  
       {/*HERO*/}
       <main className="grid grid-rows">
