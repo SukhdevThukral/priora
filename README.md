@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# PRIORA
 
-## Getting Started
 
-First, run the development server:
+**Messy feedback. Clear decisions.**
+
+_It is an AI-powered product feedback prioritization engine. Paste in raw, unclean, unstructured user feedback, support tickets, reviews, user interviews, Slack threads and Priora processes it into ranked, actionable product decisions._
+
+Live at [getpriora.xyz](https://getpriora.xyz) · Beta
+
+<img width="1906" height="907" alt="priora" src="https://github.com/user-attachments/assets/8b5c1f8a-4741-46cb-bc23-218d14f7041f" />
+
+
+---
+
+## What it does
+
+Product teams drown in qualitative feedback but struggle to act on it. Priora runs that noise through a synthesis pipeline powered by Gemini (ON MY API BTW), extracting themes, scoring severity, and surfacing what actually matters so you stop guessing and start shipping the right things.
+
+**Input:** Raw text feedback in any format  
+**Output:** Prioritized issues with strategic weight, grouped by theme
+
+
+## Stack
+
+- **Framework:** Next.js (App Router) + TypeScript
+- **Styling:** Tailwind CSS
+- **AI:** Google Gemini API
+- **Deployment:** Vercel
+
+
+## Running Locally
+
+```bash
+git clone https://github.com/yourusername/priora.git
+cd priora
+npm install
+```
+
+Create a `.env.local` file:
+
+```env
+GEMINI_API_KEY=your_api_key_here
+```
+
+Run the dev server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## How it works
 
-## Learn More
+1. **Ingest** — Paste raw feedback from any source (no formatting required)
+2. **Synthesize** — Gemini identifies recurring issues, pain points, and themes
+3. **Prioritize** — Each issue is scored by frequency, severity, and strategic impact
+4. **Decide** — You get a ranked list of what to fix, build, or investigate next
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Use cases
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Processes user interview transcripts before a sprint
+- Triaging a backlog of support tickets
+- Turning App Store reviews into a product roadmap
+- Consolidating feedback from multiple channels into a single view
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Project status
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Currently in **beta**. Core analysis pipeline is live. Roadmap includes:
+
+- [ ] CSV / file upload support
+- [ ] Persistent session history
+- [ ] Export to Notion / Linear
+- [ ] Team workspaces
+
+---
+
+## License
+
+MIT
